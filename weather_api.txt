@@ -20,14 +20,18 @@ function getWeather(){
   let weatherData = [];
   weatherData.push(data.current.temp_c);
   weatherData.push(data.current.temp_f);
-  
+  weatherData.push(data.current.cloud);
+  weatherData.push(data.current.wind_mph);
+  weatherData.push(data.current.pressure_mb);
+  weatherData.push(data.current.humidity);
+  weatherData.push(data.current.uv);
 
   let weather = [];
   weather.push(weatherData);
 
   
 
-  let targetRange = sheet.getRange('A4:B4');
+  let targetRange = sheet.getRange('A4:G4');
   targetRange.setValues(weather);
 
  
